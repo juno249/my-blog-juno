@@ -1,0 +1,137 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: Juno Nguyen' Blog
+subtitle: Share Everything We Can
+description: Share Everything I Have
+author: Juno Nguyen
+language: en
+timezone:
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://www.junonguyen.com/
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace:
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: hueman
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: heroku
+  repo: git@heroku.com:junonguyen.git
+  message: Share everything we can
+
+
+# Admin
+admin:
+    name: admin
+    password: admin
+    secret: juno-cold-blog
+    expire: 60*60
+    # cors: http://localhost:3000
+
+#admin:
+  #username: admin
+  #password: junonguyen249
+  #password_hash: #8e041d4cdb0a85dfc091c8b867febd5f
+  #secret: juno-cold-blog
+  #expire: 60*60
+  #cors: http://localhost:3000
+
+# Search plugin
+## path - file path. Default is search.xml
+## field - the search scope you want to search, you can chose:
+### post (Default) - will only covers all the posts of your blog.
+### page - will only covers all the pages of your blog.
+### all - will covers all the posts and pages of your blog.
+
+search:
+  path: search.xml
+  field: post
+
+# Sitemap
+sitemap:
+  path: sitemap.xml
+
+#deploy:
+  #type: ftpsync
+  #host: 166.62.10.32
+  #user: juno249
+  #pass: Junonguyen249
+  #remote: /home/juno249/public_html
+  #port: 21
+  #ignore:
+  #connections: 1
+  #verbose: false
+
+#deploy:
+  #type: rsync
+  #host: 166.62.10.32
+  #user: juno24
+  #root: /home/juno249/public_html
+  #port: 22
+  #delete: true
+  #verbose: true
+  #ignore_errors: false
+
+
+#deploy:
+#type: rsync
+#host: server.mywebhost.com
+#user: myusername
+#root: www.mydomain.com/public/
+#port: 22
+#delete: true
+#verbose: true
+#ignore_errors: false
